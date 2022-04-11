@@ -14,17 +14,17 @@ saveButtonEl.on("click", function (e) {
     console.log("you been clicked!")
    
     userInput = ["", "", "", "", "", "", "", "", ""];
-    localStorage.setItem(userInput, ["" , "" , "" , "" , "" , "" , "" , "" , ""]);
+    localStorage.setItem("userInput", userInput);
   //  console.log(userInput)
     
     if (e.target.id == "9am") {
-        localStorage.setItem(userInput.replace[0], inputsEl[0].value)
+        localStorage.setItem(userInput, inputsEl[0].value)
         console.log(inputsEl[0].value)
         console.log(e.target.id)
     }
 
     if (e.target.id == "10am") {
-        localStorage.setItem(userInput[1].replace(), inputsEl[1].value)
+        localStorage.setItem(userInput, inputsEl[1].value)
         console.log(inputsEl[1].value)
         console.log(e.target.id)
     }
