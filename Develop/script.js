@@ -6,19 +6,25 @@ todayEL.text(today.format('LLLL'))
 var saveButtonEl = $(".saveBtn")
 console.log(saveButtonEl)
 
-saveButtonEl.on("click", function (e) {
-    var inputsEl = $("textarea.form-control") || ["", "", "", "", "", "", "", "", "", ];
-    console.log("you been clicked!")
 
+
+
+saveButtonEl.on("click", function (e) {
+    var inputsEl = $("textarea.form-control")
+    console.log("you been clicked!")
+   
+    userInput = ["", "", "", "", "", "", "", "", ""];
+    localStorage.setItem(userInput, ["" , "" , "" , "" , "" , "" , "" , "" , ""]);
+  //  console.log(userInput)
     
     if (e.target.id == "9am") {
-        localStorage.setItem("9am", inputsEl[0].value)
+        localStorage.setItem(userInput.replace[0], inputsEl[0].value)
         console.log(inputsEl[0].value)
         console.log(e.target.id)
     }
 
     if (e.target.id == "10am") {
-        localStorage.setItem("10am", inputsEl[1].value)
+        localStorage.setItem(userInput[1].replace(), inputsEl[1].value)
         console.log(inputsEl[1].value)
         console.log(e.target.id)
     }
