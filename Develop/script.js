@@ -7,24 +7,19 @@ var saveButtonEl = $(".saveBtn")
 console.log(saveButtonEl)
 
 
-
-
 saveButtonEl.on("click", function (e) {
     var inputsEl = $("textarea.form-control")
     console.log("you been clicked!")
-   
-    userInput = ["", "", "", "", "", "", "", "", ""];
-    localStorage.setItem("userInput", userInput);
-  //  console.log(userInput)
-    
+
+
     if (e.target.id == "9am") {
-        localStorage.setItem(userInput, inputsEl[0].value)
+        localStorage.setItem("9am", inputsEl[0].value)
         console.log(inputsEl[0].value)
         console.log(e.target.id)
     }
 
     if (e.target.id == "10am") {
-        localStorage.setItem(userInput, inputsEl[1].value)
+        localStorage.setItem("10am", inputsEl[1].value)
         console.log(inputsEl[1].value)
         console.log(e.target.id)
     }
@@ -70,9 +65,12 @@ saveButtonEl.on("click", function (e) {
         console.log(inputsEl[8].value)
         console.log(e.target.id)
     }
+  
 })
+ 
+// if (today.hour() === )
 
-function loadSavedTasks () {
-}
-
-loadSavedTasks()
+ var whatTime = $("p").getAttribute(value)
+// var whatTime = document.querySelectorAll("p")
+// whatTime.html()
+console.log(whatTime)
