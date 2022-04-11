@@ -68,9 +68,23 @@ saveButtonEl.on("click", function (e) {
   
 })
  
-// if (today.hour() === )
 
- var whatTime = $("p").getAttribute(value)
+var whatTime = $(".list-group-item").find("p")
+
+for (var i = 0; i < whatTime.length; i++) {
+    console.log(whatTime[i].textContent)
+    if (today.hour() - 12 == whatTime[i].textContent) {
+    whatTime[i].textContent.parent().css("background-color", "green")
+    }
+
+   // console.log(whatTime[i].parent())
+}
+
+// (whatTime.parent().css("background-color" , "red"))
+
+
+console.log(today.hour() -12)
+console.log(typeof whatTime.toString())
+
 // var whatTime = document.querySelectorAll("p")
 // whatTime.html()
-console.log(whatTime)
