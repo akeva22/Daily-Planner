@@ -71,28 +71,63 @@ saveButtonEl.on("click", function (e) {
 
 var whatTime = $(".list-group-item").find("p")
 
+var tabs = whatTime.parent().addClass("past")
+
+currentTime = today.hour()
+
+
 for (var i = 0; i < whatTime.length; i++) {
     console.log(whatTime[i].textContent)
-    if (today.hour() - 12 == whatTime[i].textContent) {
-        whatTime.parent().eq(i).addClass("present")
-    } else if (today.hour() >= 17) {
-        whatTime.parent().eq(i).addClass("past")
+
+    if (currentTime > 12) {
+        currentTime -= 12
     }
+
+    // Check for AM hours
+
+    if (currentTime == whatTime[i].textContent) { }
+    //this is the present 
+
+    if (currentTime == whatTime[i].textContent) {
+        whatTime.parent().eq(i).addClass("present")
+    }
+    else if (currentTime < whatTime[i].textConetext) {
+        whatTime.parent().eq(i).addClass("future")
+    }
+
+
+
+
+
+
+
+
+    // whatTime.parent().eq(i).addClass("present")
+
+
+
 
 
 
     // console.log(whatTime.parent().eq(i))
 
-
 }
+
 
 
 
 console.log(whatTime.parent().eq(2))
 
 
-console.log(today.hour() - 12)
+console.log(currentTime)
 //console.log(typeof whatTime.toString())
 
 // var whatTime = document.querySelectorAll("p")
 // whatTime.html()
+
+
+
+
+
+
+
