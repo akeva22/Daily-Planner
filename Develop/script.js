@@ -78,28 +78,42 @@ currentTime = today.hour()
 
 for (var i = 0; i < whatTime.length; i++) {
     console.log(whatTime[i].textContent)
-
     if (currentTime > 12) {
         currentTime -= 12
     }
 
     // Check for AM hours
 
-    if (currentTime == whatTime[i].textContent) { }
+    // if (currentTime == whatTime[i].textContent) { }
     //this is the present 
-
-    if (currentTime == whatTime[i].textContent) {
+    console.log(whatTime[i].textContent)
+    if (currentTime === parseInt(whatTime[i].textContent)) {
+        console.log("present")
         whatTime.parent().eq(i).addClass("present")
-    }
-    else if (currentTime < whatTime[i].textConetext) {
+    } else if (currentTime < parseInt(whatTime[i].textContent) && whatTime[i].textContent.includes("PM") && parseInt(whatTime[i].textContent) != 12) {
+        console.log("future")
         whatTime.parent().eq(i).addClass("future")
-    }
+    } else if (currentTime > 5 && whatTime[i].textContent.includes("PM")) {
+        console.log("double future")
+        whatTime.parent().eq(i).addClass("future")
+    } // else if (currentTime < 5 && whatTime[i].textContent.includes("PM")) {
+    //     console.log("double future")
+    //     whatTime.parent().eq(i).addClass("future")
+
+
+
+    //  //   console.log(whatTime.parent().eq(i))
+    //  //   if (currentTime > parseInt(whatTime[i].textContext)) {
+    //  //       console.log("future")
+    //         whatTime.parent().eq(i).addClass("future")
+    //     } else {
+    //         console.log(currentTime, parseInt(whatTime[i].textContent))
+    //     }
 
 
 
 
-
-
+    console.log(currentTime)
 
 
     // whatTime.parent().eq(i).addClass("present")
@@ -119,7 +133,8 @@ for (var i = 0; i < whatTime.length; i++) {
 console.log(whatTime.parent().eq(2))
 
 
-console.log(currentTime)
+console.log(whatTime[4].textContent.includes("PM"))
+
 //console.log(typeof whatTime.toString())
 
 // var whatTime = document.querySelectorAll("p")
