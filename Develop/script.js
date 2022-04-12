@@ -65,26 +65,34 @@ saveButtonEl.on("click", function (e) {
         console.log(inputsEl[8].value)
         console.log(e.target.id)
     }
-  
+
 })
- 
+
 
 var whatTime = $(".list-group-item").find("p")
 
 for (var i = 0; i < whatTime.length; i++) {
     console.log(whatTime[i].textContent)
     if (today.hour() - 12 == whatTime[i].textContent) {
-    whatTime[i].textContent.parent().css("background-color", "green")
+        whatTime.parent().eq(i).addClass("present")
+    } else if (today.hour() >= 17) {
+        whatTime.parent().eq(i).addClass("past")
     }
 
-   // console.log(whatTime[i].parent())
+
+
+    // console.log(whatTime.parent().eq(i))
+
+
 }
 
-// (whatTime.parent().css("background-color" , "red"))
 
 
-console.log(today.hour() -12)
-console.log(typeof whatTime.toString())
+console.log(whatTime.parent().eq(2))
+
+
+console.log(today.hour() - 12)
+//console.log(typeof whatTime.toString())
 
 // var whatTime = document.querySelectorAll("p")
 // whatTime.html()
