@@ -7,7 +7,7 @@ var saveButtonEl = $(".saveBtn")
 console.log(saveButtonEl)
 
 
-saveButtonEl.on("click", function (e) {
+saveButtonEl.on("click", function(e) {
     var inputsEl = $("textarea.form-control")
     console.log("you been clicked!")
 
@@ -69,6 +69,49 @@ saveButtonEl.on("click", function (e) {
 })
 
 
+function loadTasks() {
+    var inputsEl = $("textarea.form-control")
+    for (var i = 0; i < 9; i++) {
+        console.log("balls")
+
+        var skills = localStorage.getItem("9am")
+        inputsEl[0].value = skills
+        console.log(inputsEl[0].value)
+
+        var skills = localStorage.getItem("10am")
+        inputsEl[1].value = skills
+        console.log(inputsEl[1].value)
+
+        var skills = localStorage.getItem("11am")
+        inputsEl[2].value = skills
+        console.log(inputsEl[2].value)
+
+        var skills = localStorage.getItem("12pm")
+        inputsEl[3].value = skills
+        console.log(inputsEl[3].value)
+
+        var skills = localStorage.getItem("1pm")
+        inputsEl[4].value = skills
+        console.log(inputsEl[4].value)
+
+        var skills = localStorage.getItem("2pm")
+        inputsEl[5].value = skills
+        console.log(inputsEl[5].value)
+
+        var skills = localStorage.getItem("3pm")
+        inputsEl[6].value = skills
+        console.log(inputsEl[6].value)
+
+        var skills = localStorage.getItem("4pm")
+        inputsEl[7].value = skills
+        console.log(inputsEl[7].value)
+
+        var skills = localStorage.getItem("5pm")
+        inputsEl[8].value = skills
+        console.log(inputsEl[8].value)
+    }
+}
+
 var whatTime = $(".list-group-item").find("p")
 
 var tabs = whatTime.parent().addClass("past")
@@ -96,53 +139,14 @@ for (var i = 0; i < whatTime.length; i++) {
     } else if (currentTime > 5 && whatTime[i].textContent.includes("PM")) {
         console.log("double future")
         whatTime.parent().eq(i).addClass("future")
-    } // else if (currentTime < 5 && whatTime[i].textContent.includes("PM")) {
-    //     console.log("double future")
-    //     whatTime.parent().eq(i).addClass("future")
-
-
-
-    //  //   console.log(whatTime.parent().eq(i))
-    //  //   if (currentTime > parseInt(whatTime[i].textContext)) {
-    //  //       console.log("future")
-    //         whatTime.parent().eq(i).addClass("future")
-    //     } else {
-    //         console.log(currentTime, parseInt(whatTime[i].textContent))
-    //     }
-
-
-
+    }
 
     console.log(currentTime)
 
+};
 
-    // whatTime.parent().eq(i).addClass("present")
-
-
-
-
-
-
-    // console.log(whatTime.parent().eq(i))
-
-}
-
-
-
+loadTasks()
 
 console.log(whatTime.parent().eq(2))
 
-
 console.log(whatTime[4].textContent.includes("PM"))
-
-//console.log(typeof whatTime.toString())
-
-// var whatTime = document.querySelectorAll("p")
-// whatTime.html()
-
-
-
-
-
-
-
