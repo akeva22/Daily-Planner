@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Work Day Scheduler</title>
+</head>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container-fluid">
+        <!-- Timeblocks go here -->
+        <div class="row">
+            <ul class="list-group w-75 m-auto">
+                <li class="list-group-item">
+                    <p>9AM</p>
+                    <div class="input-group input-group-lg" id="input">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="9am"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>10AM</p>
+
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary saveBtn" id="10am"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>11AM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary saveBtn" id="11am"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>12PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="12pm"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>1PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="1pm"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>2PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="2pm"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>3PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="3pm"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>4PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="4pm"> Button to Save</button>
+                </li>
+                <li class="list-group-item">
+                    <p>5PM</p>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text">To Do:</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    <button button type="button" class="btn btn-primary saveBtn" id="5pm"> Button to Save</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
